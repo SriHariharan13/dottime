@@ -4,12 +4,12 @@
   "type": "module",
   "private": true,
   "engines": { "node": ">=18" },
-  "scripts": {
-    "dev:server": "node --watch server/index.js",
-    "dev:client": "npm run dev --prefix client",
-    "build": "npm install --prefix client && npm run build --prefix client",
-    "start": "node server/index.js"
-  },
+ "scripts": {
+  "dev:server": "node --watch server/index.js",
+  "dev:client": "cd client && npm run dev",
+  "build": "cd client && npm install && npm run build",
+  "start": "node server/index.js"
+},
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
